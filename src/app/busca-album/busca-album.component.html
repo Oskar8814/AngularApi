@@ -1,10 +1,12 @@
 <div class="container mt-4">
-    <h2>Búsqueda de Álbumes</h2>
-    <input type="text" class="form-control" [(ngModel)]="album" placeholder="Ingrese el nombre del álbum">
-    <button class="btn btn-primary mt-2" (click)="searchAlbum()">Buscar</button>
-
-    <div *ngIf="loading">Cargando...</div>
+    <h2 class="text-center">Búsqueda de Álbumes</h2>
+    <div class="d-flex justify-content-center">
+        <input type="text" class="form-control w-75" [(ngModel)]="album" placeholder="Ingrese el nombre del álbum">
+        <button class="btn btn-primary ms-2" (click)="searchAlbum()">Buscar</button>
+    </div>
+    <div class="text-center mt-3" *ngIf="loading">Cargando...</div>
     <div *ngIf="error" class="text-danger">{{ error }}</div>
+
     <table class="table mt-3 table-striped table-bordered" *ngIf="results.length">
         <thead>
             <tr>

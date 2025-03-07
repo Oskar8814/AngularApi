@@ -1,9 +1,11 @@
 <div class="container mt-4">
-    <h2>Búsqueda de Artistas</h2>
-    <input type="text" class="form-control" [(ngModel)]="artist" placeholder="Ingrese el nombre del artista">
-    <button class="btn btn-primary mt-2" (click)="searchArtist()">Buscar</button>
-
-    <div *ngIf="loading">Cargando...</div>
+    <h2 class="text-center">Búsqueda de Artistas</h2>
+    <div class="d-flex justify-content-center">
+        <input type="text" class="form-control w-75" [(ngModel)]="artist" placeholder="Ingrese el nombre del artista">
+        <button class="btn btn-primary mt-2" (click)="searchArtist()">Buscar</button>
+    </div>
+        
+    <div class="text-center mt-3"  *ngIf="loading">Cargando...</div>
     <div *ngIf="error" class="text-danger">{{ error }}</div>
     <table class="table mt-3 table-striped table-bordered" *ngIf="results.length">
         <thead>
