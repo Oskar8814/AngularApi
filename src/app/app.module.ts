@@ -8,6 +8,7 @@ import { BuscaAutorComponent } from './busca-autor/busca-autor.component';
 import { BuscaAlbumComponent } from './busca-album/busca-album.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2>Búsqueda de Artistas</h2>
+    <input type="text" class="form-control" [(ngModel)]="artist" placeholder="Ingrese el nombre del artista">
+    <button class="btn btn-primary mt-2" (click)="searchArtist()">Buscar</button>
+
+    <div *ngIf="loading">Cargando...</div>
+    <div *ngIf="error" class="text-danger">{{ error }}</div>
+    <table class="table mt-3 table-striped table-bordered" *ngIf="results.length">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Spotify</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of results">
+                <td>{{ item.name }}</td>
+                <td><a [href]="item.href" target="_blank">Ver en Spotify</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
