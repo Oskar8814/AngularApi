@@ -4,4 +4,5 @@ export interface Ialbum {
     name: string;
     artists: Iartist[];
     href: string;
+    releaseDate:string;
 }

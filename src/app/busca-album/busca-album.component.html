@@ -12,6 +12,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Autor</th>
+                <th>Fecha</th>
                 <th>Enlace</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                 <td>
                     <span *ngFor="let artist of item.artists">{{ artist.name }}<br></span>
                 </td>
+                <td>{{item.releaseDate | formatDate}}</td>
                 <td><a [href]="item.href" target="_blank">Ver en Spotify</a></td>
             </tr>
         </tbody>

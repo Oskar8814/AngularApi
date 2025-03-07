@@ -9,6 +9,8 @@ import { BuscaAlbumComponent } from './busca-album/busca-album.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { IconoPipe } from './icono.pipe';
+import { FormatDatePipe } from './format-date.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     BienvenidaComponent,
     BuscaAutorComponent,
     BuscaAlbumComponent,
-    Pagina404Component
+    Pagina404Component,
+    IconoPipe,
+    FormatDatePipe
   ],
   imports: [
     BrowserModule,
